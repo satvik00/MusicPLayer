@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout"
+    android:background="@drawable/gradient_animation_list">
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/playbackButtons"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="@drawable/gradient_teal"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:paddingStart="16dp"
+            android:id="@+id/currentPosition"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:textStyle="bold"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="pause" />
+
+        <TextView
+            android:gravity="end"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/songDuration"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <SeekBar
+        android:visibility="gone"
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
